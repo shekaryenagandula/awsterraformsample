@@ -15,7 +15,7 @@ module "aws_subnet" {
 #Fetching data for VM Creation
 data "aws_vpc" "vpclist" {
   filter {
-    name   = "tag:Name"
+    name   = "Name"
     values = ["testvpc"]
   }
   depends_on = [ module.vpc_eus_project ]
