@@ -4,15 +4,10 @@ terraform {
       source  = "hashicorp/aws"
       version = "5.24.0"
     }
-    region=local.region
+    region="us-east-1"
   }
 }
 
-
-#Local variable
-locals {
-  region = "us-east-1"
-}
 
 #VPC and Subnet Creation
 module "vpc_eus_project" {
