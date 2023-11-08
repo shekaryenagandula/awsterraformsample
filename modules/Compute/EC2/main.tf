@@ -18,13 +18,14 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 resource "aws_instance" "web" {
+  # count = length(var.server_names)
+  for_each = toset(var.server_names)
   ami           = data.aws_ami.ubuntu.id
   instance_type = local.instance_type
-  associate_public_ip_address = true
   subnet_id = var.subnet_id
 
   tags = {
-    Name=var.instance_name
+    Name=each.key
     Terraform   = "true"
     Environment = "dev"
   }
