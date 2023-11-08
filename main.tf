@@ -1,14 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "5.24.0"
-    }
-    region="us-east-1"
-  }
-}
-
-
 #VPC and Subnet Creation
 module "vpc_eus_project" {
   source     = "./modules/Networking/VPC"
