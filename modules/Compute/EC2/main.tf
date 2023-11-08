@@ -22,9 +22,9 @@ resource "aws_instance" "web" {
   instance_type = local.instance_type
   associate_public_ip_address = true
   subnet_id = var.subnet_id
-  iam_instance_profile = var.instance_name
 
   tags = {
+    Name=var.instance_name
     Terraform   = "true"
     Environment = "dev"
   }
