@@ -25,7 +25,7 @@ resource "aws_instance" "web" {
   subnet_id = var.subnet_id
 
   tags = {
-    Name=format(each.key,index( keys(var.server_names), each.value))
+    Name=format(each.key,index( var.server_names, each.value))
     Terraform   = "true"
     Environment = "dev"
   }
