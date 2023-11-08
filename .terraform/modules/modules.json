@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"aws_subnet","Source":"./modules/Networking/Subnet","Dir":"modules/Networking/Subnet"},{"Key":"ec2_eus_project","Source":"./modules/Compute/EC2","Dir":"modules/Compute/EC2"},{"Key":"vpc_eus_project","Source":"./modules/Networking/VPC","Dir":"modules/Networking/VPC"}]}
