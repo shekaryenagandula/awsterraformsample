@@ -25,6 +25,5 @@ data "aws_subnet" "subnetlist" {
 module "ec2_eus_project" {
   source        = "./modules/Compute/EC2"
   server_names = ["app1","app2","app3"]
-  instance_name = lower("WebServer-${count.index}")
   subnet_id     = data.aws_subnet.subnetlist.id
 }
