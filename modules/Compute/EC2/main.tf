@@ -20,7 +20,6 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "web" {
   # count = length(var.server_names)
   for_each = var.server_names
-  count = length( var.server_names)
   ami           = data.aws_ami.ubuntu.id
   instance_type = local.instance_type
   subnet_id = var.subnet_id
