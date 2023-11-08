@@ -10,6 +10,7 @@ module "aws_subnet" {
   vpcid       = data.aws_vpc.vpclist.id
 }
 
+
 #Fetching data for VM Creation
 data "aws_vpc" "vpclist" {
   id="vpc-00d4fe584458504ee"
