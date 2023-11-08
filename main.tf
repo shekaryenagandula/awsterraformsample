@@ -1,5 +1,3 @@
-
-#VPC and Subnet Creation
 module "vpc_eus_project" {
   source     = "./modules/Networking/VPC"
   cidr_name  = "testvpc"
